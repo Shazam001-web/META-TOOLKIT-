@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>META TECH TOOLKIT</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+<h2>META TECH TOOLKIT</h2>
+
+<a href="#">Base64</a>
+<a href="#">Password Generator</a>
+<a href="#">JSON Formatter</a>
+<a href="api-tester.html">API Tester</a>
+<a href="admin.html">Admin</a>
+
+</div>
+
+<div class="main">
+
+<h1>Developer Tools</h1>
+
+<div class="tool">
+
+<h3>Base64 Encoder</h3>
+<textarea id="baseInput"></textarea>
+
+<button onclick="encodeBase64()">Encode</button>
+
+<pre id="baseOutput"></pre>
+
+</div>
+
+<div class="tool">
+
+<h3>Password Generator</h3>
+
+<input id="passLength" value="12">
+
+<button onclick="generatePassword()">Generate</button>
+
+<pre id="password"></pre>
+
+</div>
+
+<div class="tool">
+
+<h3>JSON Formatter</h3>
+
+<textarea id="jsonInput"></textarea>
+
+<button onclick="formatJSON()">Format</button>
+
+<pre id="jsonOutput"></pre>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
