@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>API Tester</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="main">
+
+<h1>API Tester</h1>
+
+<input id="url" placeholder="API URL">
+
+<select id="method">
+<option>GET</option>
+<option>POST</option>
+<option>PUT</option>
+<option>DELETE</option>
+</select>
+
+<button onclick="testAPI()">Send</button>
+
+<pre id="result"></pre>
+
+</div>
+
+<script>
+
+async function testAPI(){
+
+let url=document.getElementById("url").value;
+
+let method=document.getElementById("method").value;
+
+let res=await fetch(url,{method:method});
+
+let data=await res.text();
+
+document.getElementById("result").innerText=data;
+
+}
+
+</script>
+
+</body>
+</html>
